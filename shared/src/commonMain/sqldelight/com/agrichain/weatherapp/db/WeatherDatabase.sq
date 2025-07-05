@@ -1,0 +1,59 @@
+CREATE TABLE ForecastTable (
+    latitude TEXT,
+    longitude TEXT,
+    generationTimeMs TEXT,
+    utcOffsetSeconds TEXT,
+    timezone TEXT,
+    timezoneAbbreviation TEXT,
+    elevation TEXT,
+    time TEXT,
+    interval TEXT,
+    temperature TEXT,
+    windSpeed TEXT,
+    windDirection TEXT,
+    isDay TEXT,
+    weather TEXT,
+    weatherIcon TEXT
+);
+
+insertForecast:
+INSERT INTO ForecastTable(
+    latitude,
+    longitude,
+    generationTimeMs,
+    utcOffsetSeconds,
+    timezone,
+    timezoneAbbreviation,
+    elevation,
+    time,
+    interval,
+    temperature,
+    windSpeed,
+    windDirection,
+    isDay,
+    weather,
+    weatherIcon
+)
+VALUES(
+    ?,
+    ?,
+    ?,
+    ?,
+    ?,
+    ?,
+    ?,
+    ?,
+    ?,
+    ?,
+    ?,
+    ?,
+    ?,
+    ?,
+    ?
+);
+
+selectForecast:
+SELECT * FROM ForecastTable;
+
+removeForecast:
+DELETE FROM ForecastTable;
